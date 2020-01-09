@@ -3,7 +3,7 @@ package com.company;
 public class Patient extends User {
 
     private Appointment[] appointments;
-    private Appointment[] prescriptions;
+    private Prescription[] prescriptions;
 
 
     public Patient() {
@@ -31,14 +31,29 @@ public class Patient extends User {
         PendingAppointments.addAppointment(appnt);
     }
 
+    public void addPrescription(Prescription input) {
+        int Length;
+        if (prescriptions == null) {
+            Length = 0;
+        }
+        else {
+            Length = prescriptions.length;
+        }
 
+        Prescription[] newArray = new Prescription[Length + 1];
+        for (int i = 0; i < Length; i++) {
+            newArray[i] = prescriptions[i];
+        }
+        newArray[Length] = input;
+        prescriptions = newArray;
+    }
 
     public void viewHistory() {
 
     }
 
-    public void viewPrescription() {
-
+    public String viewPrescription() {
+        return prescriptions[0].getNotes();
     }
 
     public void requestTermination() {

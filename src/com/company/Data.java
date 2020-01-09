@@ -1,9 +1,5 @@
 package com.company;
 
-import com.company.Appointment;
-
-import java.lang.reflect.Array;
-
 public final class Data {
 
     private static Data instance;
@@ -67,6 +63,25 @@ public final class Data {
             instance = new Data();
         }
         return instance;
+    }
+
+    public static Prescription[] pushObject(Prescription[] array, Prescription prescription) {
+        int Length;
+        if (array == null) {
+            Length = 0;
+        }
+        else {
+            Length = array.length;
+        }
+
+        Prescription[] newArray = new Prescription[Length + 1];
+        for (int i = 0; i < Length; i++) {
+            newArray[i] = array[i];
+        }
+        newArray[Length] = prescription;
+        return newArray;
+
+
     }
 
     public static void setInstance(Data instance) {
