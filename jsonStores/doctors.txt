@@ -1,0 +1,1 @@
+{"password":"password","address":"Address0","phoneNumber":123456,"name":"Steve0","userId":"D0001","email":"Email0"}{"password":"password","address":"Address1","phoneNumber":123456,"name":"Steve1","userId":"D0002","email":"Email1"}{"password":"password","address":"Address2","phoneNumber":123456,"name":"Steve2","userId":"D0003","email":"Email2"}
